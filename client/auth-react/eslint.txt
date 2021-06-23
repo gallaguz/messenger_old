@@ -1,0 +1,77 @@
+npx create-react-app client --template typescript
+npm i mobx mobx-react-lite axios @types/axios
+eslint --init
+npm i -D eslint-config-airbnb-typescript eslint-plugin-jest eslint-config-airbnb prettier eslint-config-prettier eslint-plugin-prettier
+
+
+.eslintrc.json
+
+{
+    "env": {
+        "browser": true,
+        "es2021": true,
+        "jest": true
+    },
+    "extends": [
+        "airbnb-typescript",
+        "airbnb/hooks",
+        "plugin:jest/recommended",
+        "plugin:prettier/recommended",
+        "eslint:recommended",
+        "plugin:react/recommended",
+        "plugin:@typescript-eslint/recommended"
+    ],
+    "parser": "@typescript-eslint/parser",
+    "parserOptions": {
+        "ecmaFeatures": {
+            "jsx": true
+        },
+        "ecmaVersion": 12,
+        "sourceType": "module",
+        "project": "./tsconfig.json"
+    },
+    "plugins": [
+        "react",
+        "@typescript-eslint"
+    ],
+    "rules": {
+        "import/prefer-default-export": "off",
+        "prettier/prettier": [
+            "error",
+            {
+                "max-len": [
+                    "error", {
+                        "code": 80,
+                        "ignoreTrailingComments": true,
+                        "ignoreComments": true,
+                        "ignoreUrls": true,
+                        "ignoreStrings": true,
+                        "ignoreTemplateLiterals": true,
+                        "ignoreRegExpLiterals": true,
+                        "ignorePattern": "^\\s*var\\s.+=\\s*require\\s*\\("
+                    }
+                ],
+                "trailingComma": "es5",
+                "semi": true,
+                "jsxSingleQuote": true,
+                "singleQuote": true,
+                "useTabs": true
+            }
+        ]
+    }
+}
+
+-------------------------------------------------------------------------------
+no-param-reassign
+
+Присвоение переменных, объявленных как параметры функции, может вводить в
+заблуждение и приводить к запутанному поведению, поскольку изменение
+параметров функции также приведет к изменению argumentsобъекта.
+Часто назначение параметров функции является непреднамеренным и указывает
+на ошибку или ошибку программиста.
+Это правило также может быть настроено на сбой при изменении параметров
+функции. Побочные эффекты в параметрах могут вызвать нелогичный поток
+выполнения и затруднить отслеживание ошибок.
+Детали правила
+Это правило направлено на предотвращение непреднамеренного поведения,
+вызванного изменением или переназначением параметров функции.

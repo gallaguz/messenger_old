@@ -1,0 +1,17 @@
+{
+  "name": "server",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "api": "cd auth-api && npm run dev",
+    "ws": "cd chat-ws && npm run dev",
+    "dev": "concurrently --kill-others-on-fail \"npm run api\" \"npm run ws\""
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "concurrently": "^6.2.0"
+  }
+}

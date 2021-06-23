@@ -1,0 +1,58 @@
+{
+  "env": {
+    "browser": true,
+    "es2021": true,
+    "jest": true
+  },
+  "extends": [
+    "airbnb-typescript",
+    "airbnb/hooks",
+    "plugin:jest/recommended",
+    "plugin:prettier/recommended",
+    "eslint:recommended",
+    "plugin:react/recommended",
+    "plugin:@typescript-eslint/recommended"
+  ],
+  "parser": "@typescript-eslint/parser",
+  "parserOptions": {
+    "ecmaFeatures": {
+      "jsx": true
+    },
+    "ecmaVersion": 12,
+    "sourceType": "module",
+    "project": "./tsconfig.json"
+  },
+  "plugins": [
+    "react",
+    "@typescript-eslint"
+  ],
+  "rules": {
+    "no-underscore-dangle": 2,
+    "import/prefer-default-export": "off",
+    "import/no-cycle": [ 2, { "maxDepth": 1 } ],
+    "no-param-reassign": [ 2, { "props": true } ],
+    "prettier/prettier": [
+      "error",
+      {
+        "max-len": [
+          "error",
+          {
+            "code": 80,
+            "ignoreTrailingComments": true,
+            "ignoreComments": true,
+            "ignoreUrls": true,
+            "ignoreStrings": true,
+            "ignoreTemplateLiterals": true,
+            "ignoreRegExpLiterals": true,
+            "ignorePattern": "^\\s*var\\s.+=\\s*require\\s*\\("
+          }
+        ],
+        "trailingComma": "es5",
+        "semi": true,
+        "jsxSingleQuote": true,
+        "singleQuote": true,
+        "useTabs": true
+      }
+    ]
+  }
+}

@@ -1,0 +1,27 @@
+.Nav {
+    display: flex;
+    margin: 10px;
+    padding: 10px;
+
+}
+
+.Nav ul {
+    margin: 0;
+    padding: 0;
+}
+
+.Nav ul li {
+    text-decoration: none;
+    display: inline-flex;
+}
+
+.Nav ul li a {
+    text-decoration: none;
+    color: white;
+}
+
+.Nav ul li a:hover {
+    color: darkslategray;
+}
+
+.Nav ul li:after { content: "\00a0 "; }

@@ -1,0 +1,20 @@
+{
+  "name": "client",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "auth-react": "cd auth-react && npm run dev",
+    "auth-vue": "cd auth-vue && npm run dev",
+    "chat-react": "cd chat-react && npm run dev",
+    "chat-vue": "cd chat-vue && npm run dev",
+    "auth": "concurrently --kill-others-on-fail \"npm run auth-react\" \"npm run auth-vue\"",
+    "chat": "concurrently --kill-others-on-fail \"npm run chat-react\" \"npm run chat-vue\""
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "concurrently": "^6.2.0"
+  }
+}

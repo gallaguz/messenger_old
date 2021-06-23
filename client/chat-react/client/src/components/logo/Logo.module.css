@@ -1,0 +1,10 @@
+.Logo {
+    display: flex;
+    margin: 10px;
+    padding: 10px;
+}
+
+.Logo a {
+    text-decoration: none;
+    color: white;
+}

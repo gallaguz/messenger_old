@@ -1,0 +1,45 @@
+{
+  "name": "backend",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "nodemon -r esm index.js",
+    "db_create": "concurrently --kill-others-on-fail \"sequelize db:create\"",
+    "db_drop": "concurrently --kill-others-on-fail \"equelize db:drop\"",
+    "db_migrate": "concurrently --kill-others-on-fail \"sequelize db:migrate\"",
+    "db_migrate_undo": "concurrently --kill-others-on-fail \"sequelize db:migrate:undo\"",
+    "db_seed_all": "concurrently --kill-others-on-fail \"sequelize db:seed:all\"",
+    "db_seed_undo_all": "concurrently --kill-others-on-fail \"sequelize db:seed:undo:all\""
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "body-parser": "^1.18.3",
+    "concurrently": "^6.0.2",
+    "consolidate": "^0.16.0",
+    "cors": "^2.8.5",
+    "esm": "^3.2.25",
+    "express": "^4.17.1",
+    "express-list-routes": "^1.1.3",
+    "express-mysql-session": "^2.1.5",
+    "express-session": "^1.17.1",
+    "handlebars": "^4.7.7",
+    "jsonwebtoken": "^8.5.1",
+    "morgan": "^1.10.0",
+    "mysql2": "^2.2.5",
+    "nodemon": "^2.0.7",
+    "pg": "^8.6.0",
+    "sequelize": "^6.6.2",
+    "socket.io": "^4.0.1"
+  },
+  "devDependencies": {
+    "babel-eslint": "^10.1.0",
+    "bcrypt": "^5.0.1",
+    "cookie-parser": "^1.4.5",
+    "eslint": "^7.25.0",
+    "eslint-config-airbnb-base": "^14.2.1",
+    "eslint-plugin-import": "^2.22.1"
+  }
+}

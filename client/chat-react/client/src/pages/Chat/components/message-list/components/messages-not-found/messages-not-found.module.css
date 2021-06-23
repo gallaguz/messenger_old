@@ -1,0 +1,17 @@
+.wrapper {
+  height: 100%;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-grow: 1;
+  flex-direction: column;
+  width: 80%;
+  background-color: #0e1621;
+}
+
+.noData {
+  background-color: #17212b;
+  padding: 15px;
+  border-radius: 10px;
+}
