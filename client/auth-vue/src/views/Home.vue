@@ -1,16 +1,23 @@
 <template>
-	<div class="home">
-		<HelloWorld msg="msg" />
+	<div>
+		<Authorization :msg="msg" />
 	</div>
 </template>
 
 <script>
-import HelloWorld from '@/components/Authorization.vue';
+import Authorization from '@/components/Authorization.vue';
 
 export default {
 	name: 'Home',
 	components: {
-		HelloWorld,
+		Authorization,
+	},
+	data: () => {
+		return {
+			msg: 'Authorization',
+		};
 	},
 };
 </script>
+
+<style lang="sass" module></style>

@@ -15,5 +15,9 @@ router.post('/logout', UserController.logout);
 router.get('/activate/:link', UserController.activate);
 router.get('/refresh', UserController.refresh);
 router.get('/users', authMiddleware, UserController.getUsers);
+router.post('/test', (req, res, next) => {
+	res.json(req.body);
+	next();
+});
 
 module.exports = router;

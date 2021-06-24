@@ -5,10 +5,10 @@
   "main": "index.js",
   "scripts": {
     "auth-react": "cd auth-react && npm run dev",
-    "auth-vue": "cd auth-vue && npm run dev",
+    "auth-vue-ts": "cd auth-vue-ts && npm run dev",
     "chat-react": "cd chat-react && npm run dev",
     "chat-vue": "cd chat-vue && npm run dev",
-    "auth": "concurrently --kill-others-on-fail \"npm run auth-react\" \"npm run auth-vue\"",
+    "auth": "concurrently --kill-others-on-fail \"npm run auth-react\" \"npm run auth-vue-ts\"",
     "chat": "concurrently --kill-others-on-fail \"npm run chat-react\" \"npm run chat-vue\""
   },
   "keywords": [],

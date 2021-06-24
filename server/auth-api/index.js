@@ -8,13 +8,14 @@ const errorMiddleware = require('./middlewares/error-middleware');
 
 const PORT = process.env.PORT || 5000;
 const app = express();
+const allowList = [process.env.REACT_CLIENT_URL, process.env.VUE_CLIENT_URL];
 
 app.use(express.json());
 app.use(cookieParser());
 app.use(
 	cors({
 		credentials: true,
-		origin: process.env.CLIENT_URL,
+		origin: allowList,
 	})
 );
 app.use('/api', router);
@@ -44,6 +45,6 @@ const start = async () => {
 
 start()
 	.then(() => {
-		console.log(`Server started on http://localhost:${PORT}`);
+		console.log(`Api Server started on http://localhost:${PORT}`);
 	})
 	.catch((e) => console.log(e));
